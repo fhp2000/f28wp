@@ -62,7 +62,7 @@ nav a:hover {
 }
 
 nav a.active {
-    background-color: rgb(0, 255, 51);
+    background-color: #424242;
   }
 
 /* Banner Styles */
