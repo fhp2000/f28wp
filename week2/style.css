@@ -63,6 +63,7 @@ nav a:hover {
 
 nav a.active {
     background-color: #424242;
+    border-radius: 25px;
   }
 
 /* Banner Styles */
