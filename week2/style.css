@@ -59,11 +59,12 @@ nav a {
 
 nav a:hover {
     background-color: #505050;  /* Darker shade for hover */
+    border-radius: 20px;
 }
 
 nav a.active {
     background-color: #424242;
-    border-radius: 25px;
+    border-radius: 20px;
   }
 
 /* Banner Styles */
