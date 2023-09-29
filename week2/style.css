@@ -11,8 +11,8 @@ body {
 header {
    position: sticky;
     top: 0;
-    background-color: #282689;
-    color: #fff;
+    background-color: #97cedb;
+    color: #2a536b;
     text-align: center;
     padding: 20px;
   
@@ -37,12 +37,13 @@ header {
 /* Navigation Styles */
 
 nav ul {
-    background-color: #333;
-    color: #fff;
+    background-color: #feffd9;
+    color: #f9c57d;
     text-align: center;
     list-style-type: none;
+    height: 40px;
     margin: 0;
-    padding: 20px;
+    padding: 5px;
 }
 
 nav li {
@@ -52,22 +53,22 @@ nav li {
 nav a {
     display: block;
     border-radius: 20px;
-    color: #fff;
+    color: #433e3e;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 16px;
     text-decoration: none;
     transition: background-color 0.3s;  /* Smooth transition for hover effect */
 }
 
 nav a:hover {
-    background-color: #505050;  /* Darker shade for hover */
-    border-radius: 20px;
+    background-color: #eddec9;  /* different shade for hover */
+    border-radius: 15px;
     transform: scale(1.1);
 }
 
 nav a.active {
-    background-color: #424242;
-    border-radius: 20px;
+    background-color: #eec387;
+    border-radius: 15px;
   }
 
 /* Banner Styles */
@@ -113,8 +114,8 @@ main h3 {
 }
 
 .service-column {
-    flex-basis: calc(25% - 20px);
-    max-width: calc(25% - 20px);
+    flex-basis: calc(50% - 20px);
+    max-width: calc(50% - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,17 +148,29 @@ main h3 {
 }
 
 /* Call to Action Styles */
-.cta-container {
-    text-align: center;
-    padding: 20px;
-    background-color: #88A0A8;
-    margin-top: 30px;
+h2.cta-insides{
+    text-transform: uppercase;
 }
+
+p.cta-insides{
+    font-size: 1.0em;
+    font-weight: 200;
+}
+
+.cta-container {
+    border: 1px solid rgb(148, 148, 148);
+    text-align: center;
+    font-size: 1.10em;
+    padding: 22px;
+    background-color: #ededed;
+    margin-top: 25px;
+}
+
 
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #eec387;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -167,13 +180,13 @@ main h3 {
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #eddec9;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #97cedb;
+    color: #2a536b;
     text-align: center;
     padding: 20px;
 }
@@ -188,7 +201,7 @@ footer li {
 }
 
 footer a {
-    color: #fff;
+    color: #2a536b;
     text-decoration: none;
     transition: color 0.3s;  /* Smooth transition for hover effect */
 }
