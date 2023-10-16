@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Gallery - Wanderlust Voyages</title>
   <link rel="stylesheet" href="style.css">
+  
   <style>
    .gallery-container {
 	margin: 0 auto;
@@ -40,78 +41,51 @@
   <main class="services">
       <h1>Gallery</h1>
     <!-- Slide Show -->
-      <div class="Container">
+      <div class="container">
         <div class="mySlides">
           <div class="numbertext"> 1 /8</div>
-          <img src="images/1.png" alt="gallery slides">
-
-          <a class="prev" onclick="plusSlides(-1)"></a>
-          <a class="next" onclick="plusSlides(1)"></a>
-
+          <img src="images/1.png" alt="gallery slides" class="slideshow-img">
         </div>
       
         <div class="mySlides">
           <div class="numbertext"> 2 /8</div>
-          <img src="images/2.png" alt="gallery slides">
-
-          <a class="prev" onclick="plusSlides(-1)"></a>
-          <a class="next" onclick="plusSlides(1)"></a>
-
+          <img src="images/2.png" alt="gallery slides"  class="slideshow-img">
         </div>
 
         <div class="mySlides">
           <div class="numbertext"> 3 /8</div>
-          <img src="images/3.png" alt="gallery slides">
-
-          <a class="prev" onclick="plusSlides(-1)"></a>
-          <a class="next" onclick="plusSlides(1)"></a>
-
+          <img src="images/3.png" alt="gallery slides"  class="slideshow-img">
         </div>
 
         <div class="mySlides">
           <div class="numbertext"> 4 /8</div>
-          <img src="images/4.png" alt="gallery slides">
-
-          <a class="prev" onclick="plusSlides(-1)"></a>
-          <a class="next" onclick="plusSlides(1)"></a>
-
+          <img src="images/4.png" alt="gallery slides"  class="slideshow-img">
         </div>
 
         <div class="mySlides">
           <div class="numbertext"> 5 /8</div>
-          <img src="images/5.png" alt="gallery slides">
-
-          <a class="prev" onclick="plusSlides(-1)"></a>
-          <a class="next" onclick="plusSlides(1)"></a>
-
+          <img src="images/5.png" alt="gallery slides"  class="slideshow-img">
         </div>
     
         <div class="mySlides">
           <div class="numbertext"> 6 /8</div>
-          <img src="images/6.png" alt="gallery slides">
-
-          <a class="prev" onclick="plusSlides(-1)"></a>
-          <a class="next" onclick="plusSlides(1)"></a>
-
+          <img src="images/6.png" alt="gallery slides"  class="slideshow-img">
         </div>
 
         <div class="mySlides">
           <div class="numbertext"> 7 /8</div>
-          <img src="images/7.png" alt="gallery slides">
-
-          <a class="prev" onclick="plusSlides(-1)"></a>
-          <a class="next" onclick="plusSlides(1)"></a>
-
+          <img src="images/7.png" alt="gallery slides"  class="slideshow-img">
         </div>
 
         <div class="mySlides">
           <div class="numbertext"> 8 /8</div>
-          <img src="images/8.png" alt="gallery slides">
-
-          <a class="prev" onclick="plusSlides(-1)"></a>
-          <a class="next" onclick="plusSlides(1)"></a>
-
+          <img src="images/8.png" alt="gallery slides"  class="slideshow-img">
         </div>
+
+        <!-- next and prev buttons -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
       </div>
     
     
@@ -134,44 +108,40 @@
  </div>
 
  <script>
-  // Declare a VARIABLE TO KEEP TRACK OF THE CURRENT SLIDE POSITTION
-  let slideIndex=1;
-
+  let slideIndex = 1;
   showSlides(slideIndex);
+  
   function plusSlides(n) {
-    showSlides(slideIndex =+ next);
+    showSlides(slideIndex += n);
   }
   
-  //function to jump to a scecific slide in the slideshow
   function currentSlide(n) {
-    showSlides(slideIndex = next);
+    showSlides(slideIndex = n);
   }
   
-  function showSlide(n) {
+  function showSlides(n) {
     let i;
-    let slides=document.getElementsByClassName("mySlides");    
-    let dots= document.getElementsByClassName("demo");
-    let captionText= document.getElementById("caption");
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    let captionText = document.getElementById("caption");
 
-    if (n > slides.length) { slideIndex=1;   }
+    if (n > slides.length) {slideIndex = 1} 
 
-    if (n<1) { slideIndex=slides.length;   }
+    if (n < 1) {slideIndex = slides.length}
 
     for (i = 0; i < slides.length; i++) {
-     slides[i].style.display= "none";      
+      slides[i].style.display = "none";  
     }
 
-    for(i=0; i< dots.length; i++){
-      dots[i].className =dots[i].className.replace(" active"," ");
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    slides[slideIndex-1].style.display= "block";
+    slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-
-    captionText.innerHTML = dots[slideIndex=1].alt;
+    captionText.innerHTML = dots[slideIndex-1].alt;
   }
-
- </script>
+  </script>
 
 </body>
 </html>
