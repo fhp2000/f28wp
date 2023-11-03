@@ -9,12 +9,14 @@ body {
  
 /* Header Styles */
 header {
-   position: sticky;
+    position: sticky;
     top: 0;
+    width: 100%;
     background-color: #97cedb;
     color: #2a536b;
     text-align: center;
     padding: 20px;
+    z-index: 10;
   
 }
 
