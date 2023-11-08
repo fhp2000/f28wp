@@ -1,13 +1,10 @@
-document.addEventListener('DOMContentLoaded',function(){
-    console.log("main.js is loaded");
-
     //https://fhp2000.github.io/week4/cities1.json
 
 var cityContainer = document.getElementById("city-info");
 var btn = document.getElementById("btn");
 btn.addEventListener("click", function(){
 var ourRequest = new XMLHttpRequest();
-ourRequest.open('GET', 'https://fhp2000.github.io/week4/cities1.json');
+ourRequest.open('GET', 'https://fhp2000.github.io/week4-1/cities1.json');
 ourRequest.onload = function() {
 var ourData = JSON.parse(ourRequest.responseText);
 renderHTML(ourData);
@@ -40,5 +37,3 @@ htmlString += '.</p>';
 }
 cityContainer.insertAdjacentHTML('beforeend' , htmlString);
 }
-
-})
