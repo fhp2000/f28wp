@@ -1,4 +1,7 @@
-//https://fhp2000.github.io/week4/cities1.json
+document.addEventListener('DOMContentLoaded',function(){
+    console.log("main.js is loaded");
+
+    //https://fhp2000.github.io/week4/cities1.json
 
 var cityContainer = document.getElementById("city-info");
 var btn = document.getElementById("btn");
@@ -37,3 +40,5 @@ htmlString += '.</p>';
 }
 cityContainer.insertAdjacentHTML('beforeend' , htmlString);
 }
+
+})
